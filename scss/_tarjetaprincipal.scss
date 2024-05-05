@@ -1,0 +1,189 @@
+.card-post{
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 96%;
+  margin-top: 10px;
+}
+
+.head {
+  img {
+    width: 100%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+}
+
+.content-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  p {
+    color: $secondary-text;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  h4 {
+    font-weight: 400;
+    font-size: 15px;
+    padding: 8px 5px;
+    border-radius: 5px;
+  }
+  h4:hover {
+    background-color: $border-color;
+  }
+}
+
+.content-card2 {
+  padding: 16px 60px;
+  display: flex;
+  flex-direction: column;
+  a {
+    max-width: 80%;
+  }
+  h3 {
+    color: $main-text;
+    font-size: 30px;
+  }
+}
+
+.logo-image {
+  img {
+    border-radius: 50%;
+  }
+  position: relative;
+  display: inline-block;
+}
+
+.taipy-logo {
+  display: block;
+  img {
+    width: 52px;
+  }
+}
+.profile {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  img {
+    max-width: 20px;
+    border: solid 2px white;
+  }
+}
+
+.p-nodata {
+  display: none;
+}
+
+.reload {
+  height: 50%;
+  width: 30px;
+  margin: auto 0;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px black;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.hashtags {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  span {
+    padding: 8px 5px;
+    border-radius: 8px;
+  }
+  span:hover {
+    background-color: $hoverColor;
+  }
+}
+
+.center-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 96%;
+  margin-top: 15px;
+}
+
+.center-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  p {
+    font-size: 16px;
+  }
+}
+
+.center-button:hover {
+  background-color: white;
+  cursor: pointer;
+  p {
+    color: $accent-text;
+  }
+}
+
+.reactions {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  padding: 20px;
+}
+
+.emojis-reaction {
+  display: flex;
+  align-items: center;
+  .emojis {
+    padding: 5px;
+    border-radius: 8px;
+    span {
+      color: $main-text;
+    }
+  }
+  img {
+    width: 18px;
+    height: 18px;
+  }
+  .emojis:hover {
+    background-color: $bgMain;
+  }
+  span {
+    margin: 0 3px;
+  }
+}
+.emojis {
+  display: flex;
+  align-items: center;
+}
+
+.delete-update {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-delete,
+.button-update {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+  background: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.button-delete:hover,
+.button-update:hover {
+  background-color: $hoverColor;
+  cursor: pointer;
+}
+
+.save {
+  p {
+    font-size: 13px;
+  }
+}
