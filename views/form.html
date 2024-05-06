@@ -10,13 +10,22 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <style>
+      body {
+        background-color: #F5F5F5;
+      }
+      .form-content {
+        background-color: #fff;
+      }
+    </style>
   </head>
 
   <body>
     <div class="container">
       <nav class="navbar">
         <div class="container justify-content-start">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="../index.html">
             <img
               src="../assets/android-chrome-512x512.png"
               alt="Dev.to Form"
@@ -27,8 +36,9 @@
           <span>Create post</span>
         </div>
       </nav>
-      <form class="border rounded p-3 px-5">
-        <div class="col-3">
+      <form class="col-12 col-md-9">
+       <div class="rounded-top p-3 px-5 form-content">
+        <div class="col-6 col-md-3">
           <input
             type="text"
             class="form-control shadow-sm"
@@ -50,29 +60,31 @@
             placeholder="Add up to 4 tags..."
           />
         </div>
-        <div class="row g-3">
-          <div class="col-md-2">
-            <input
-              type="number"
-              class="form-control border-0 shadow-sm"
-              placeholder="Reactions"
-            />
-          </div>
-          <div class="col-md-3">
-            <input
-              type="date"
-              class="form-control border-0 shadow-sm"
-              id="inputPassword4"
-            />
-          </div>
+       </div>
+       <div class="row g-3 my-1 px-5 reactions-date">
+        <div class="col-4 col-md-2 mb-3">
+          <input
+            type="number"
+            class="form-control border-0 shadow-none"
+            placeholder="Reactions"
+          />
         </div>
-        <div class="mb-3">
-          <textarea
-            class="form-control no-resize mt-3 border-0 p-3 shadow-none"
-            id="exampleFormControlTextarea1"
-            rows="12"
-            placeholder="Write your post content here..."
-          ></textarea>
+        <div class="col-5 col-md-3 mb-3">
+          <input
+            type="date"
+            class="form-control border-0 shadow-none"
+          />
+        </div>
+      </div>
+        <div class="rounded-bottom p-3 px-5 form-content mb-3">
+          <div class="mb-3">
+            <textarea
+              class="form-control no-resize mt-3 border-0 p-3 shadow-none"
+              id="exampleFormControlTextarea1"
+              rows="12"
+              placeholder="Write your post content here..."
+            ></textarea>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary">Publish</button>
       </form>
