@@ -1,7 +1,38 @@
-document.getElementById('login-button').addEventListener('click', function() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+const formBtn = document.getElementById("form-btn");
 
-    console.log('Correo electrónico:', email);
-    console.log('Contraseña:', password);
+formBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  const form = document.querySelectorAll(
+    "#form-post input, #form-post textarea"
+  );
+  let postObject = {};
+
+  form.forEach((input) => {
+    const type = input.type;
+    console.log(type);
+    const property = input.name;
+    const value = input.value;
+    switch (type) {
+      case "text":
+        postObject[property] = value;
+        break;
+      case "number":
+        postObject[property] = Number(value);
+        break;
+      case "date":
+        postObject[property] = value;
+        break;
+      case "textarea":
+        postObject[property] = value;
+        break;
+    }
+  });
+  console.log(postObject);
+  // window.open(location.origin)
 });
+
+const tags = document.getElementById('post-tags')
+
+tags.addEventListener('keyup', event => {
+  
+})
