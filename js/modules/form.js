@@ -1,6 +1,8 @@
+import { createPosts } from "./api/devtoAPi.js";
+
 const formBtn = document.getElementById("form-btn");
 
-formBtn.addEventListener("click", (event) => {
+formBtn.addEventListener("click", async (event) => {
   event.preventDefault();
   const form = document.querySelectorAll(
     "#form-post input, #form-post textarea"
@@ -27,11 +29,24 @@ formBtn.addEventListener("click", (event) => {
         break;
     }
   });
+
+  const rating = randomNumber()
+  postObject.rating = rating
   console.log(postObject);
-  // window.open(location.origin)
+
+  const sendPost = await createPosts(postObject)
+  window.open(location.origin)
 });
 
 const tags = document.getElementById('post-tags')
+
+function randomNumber() {
+  const random = Math.random()
+  const multiplied = random * 10
+  const rounded = Math.floor(multiplied)
+  const result = rounded + 1
+  return result
+}
 
 tags.addEventListener('keyup', event => {
   
