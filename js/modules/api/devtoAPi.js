@@ -1,4 +1,4 @@
-const BASE_URL = "https://javascriptglo-default-rtdb.firebaseio.com/posts";
+const BASE_URL = "https://reto-js-10b99-default-rtdb.firebaseio.com/";
 
 const createPosts = async (postObject) => {
   let response = await fetch(`${BASE_URL}/.json`, {
