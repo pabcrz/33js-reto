@@ -30,3 +30,9 @@ formBtn.addEventListener("click", (event) => {
   console.log(postObject);
   // window.open(location.origin)
 });
+
+const tags = document.getElementById('post-tags')
+
+tags.addEventListener('keyup', event => {
+  
+})
