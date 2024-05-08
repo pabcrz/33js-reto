@@ -38,12 +38,14 @@
       <div class="containerNav">
         <nav class="container-flex-row navbar">
           <div class="container-flex-row">
-            <img
-              class="imagen"
-              src="./img/resized_logo_UQww2soKuUsjaOGNB38o.png"
-            />
+            <a href="index.html">
+              <img
+                class="imagen"
+                src="./img/resized_logo_UQww2soKuUsjaOGNB38o.png"
+              />
+            </a>
             <div>
-              <input class="input-text" type="text" placeholder="Search..." />
+              <input id="filter-post" class="input-text" type="text" placeholder="Search..." />
             </div>
           </div>
           <div class="container-flex-row">
@@ -1041,19 +1043,14 @@
             <!-- Aquie estan los botones relevant, lates, top -->
             <div class="center-buttons">
               <div class="center-button">
-                <p>Relevant</p>
+                <button id="relevant">Relevant</button>
               </div>
               <div class="center-button">
-                <p>Latest</p>
+                <button id="latest">Latest</button>
               </div>
               <div class="center-button">
-                <p>Top</p>
+                <button id="top">Top</button>
               </div>
-
-              <!-- Este boton es para recargar la pagina -->
-              <button class="reload" onclick="location.reload()">
-                <img src="/img/refresh.svg" alt="" />
-              </button>
             </div>
 
             <!-- Aqui van los posts

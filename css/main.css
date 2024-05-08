@@ -278,6 +278,10 @@ body {
   font-size: 13.5px;
 }
 
+.hastag {
+  font-size: 0.9rem;
+}
+
 .recently,
 .trending {
   display: flex;
@@ -328,6 +332,8 @@ body {
   width: 100%;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .content-card {
@@ -343,11 +349,17 @@ body {
 .content-card h4 {
   font-weight: 400;
   font-size: 15px;
-  padding: 8px 5px;
   border-radius: 5px;
 }
 .content-card h4:hover {
   background-color: #e9e9e9;
+}
+
+.name-date {
+  margin-left: 3.5rem;
+  line-height: 1;
+  margin-top: 1rem;
+  text-align: start;
 }
 
 .content-card2 {
@@ -380,11 +392,11 @@ body {
 
 .profile {
   position: absolute;
-  top: 25px;
-  left: 25px;
+  top: 17px;
+  left: 15px;
 }
 .profile img {
-  max-width: 20px;
+  max-width: 35px;
   border: solid 2px white;
 }
 

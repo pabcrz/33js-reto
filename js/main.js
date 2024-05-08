@@ -10,8 +10,8 @@ const traerPost = async () => {
 };
 
 //Crear el DOM para los post
-const creacionPost = (post) => {
-    let {imagenPost, avatar, nombre, fecha, titulo, tags, reacciones} = post;
+const creacionPost = (post,index) => {
+    let {coverPost, avatar, author, date, title, tags, reactions} = post;
 
     //**Contenedor de un post
     let contenedorPost = document.createElement("div");
@@ -22,7 +22,7 @@ const creacionPost = (post) => {
     contenedorImagen.classList.add("head");
     let imagen = document.createElement("img");
     imagen.classList.add("imagen-post");
-    imagen.setAttribute("src", imagenPost);
+    imagen.setAttribute("src", coverPost);
     contenedorImagen.append(imagen);
 
     //**Contenedor para foto y datos del usuario
@@ -43,11 +43,11 @@ const creacionPost = (post) => {
     contenedorDatos.classList.add("name-date");
     let usuario = document.createElement("h4");
     usuario.classList.add("autor");
-    let usuarioText = document.createTextNode(nombre);
+    let usuarioText = document.createTextNode(author);
     usuario.append(usuarioText);
     let fechaPost = document.createElement("p");
     fechaPost.classList.add("fecha");
-    let fechaText = document.createTextNode(fecha);
+    let fechaText = document.createTextNode(date);
     fechaPost.append(fechaText);
     contenedorDatos.append(usuario,fechaPost);
     contenedorUsuario.append(contenedorFotos,contenedorDatos);
@@ -58,15 +58,15 @@ const creacionPost = (post) => {
     //Titulo
     let tituloElement = document.createElement("h3");
     tituloElement.classList.add("titulo-post");
-    let tituloText = document.createTextNode(titulo);
+    let tituloText = document.createTextNode(title);
     tituloElement.append(tituloText);
     //Tags
     let contenedorTags = document.createElement("div");
     contenedorTags.classList.add("hashtags");
     let arregloTags = tags.split(",");
-    console.log(arregloTags);
     arregloTags.forEach((tag) => {
         let span = document.createElement("span");
+        span.classList.add("hastag");
         let tagText = document.createTextNode(`#${tag}`);
         span.append(tagText);
         contenedorTags.append(span);
@@ -92,17 +92,19 @@ const creacionPost = (post) => {
     emoji5.setAttribute("src", "https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg");
     //Otros
     let reaccionesElement = document.createElement("span");
-    reaccionesElement.classList.add("reaction-post")
-    let reaccionesnum = document.createTextNode(reacciones);
+    reaccionesElement.classList.add("reaction-post");
+    let reaccionesnum = document.createTextNode(reactions);
     reaccionesElement.append(reaccionesnum);
     let comentarios = document.createElement("span");
-    comentarios.classList.add("comments-post")
+    comentarios.classList.add("comments-post");
     let comentariosnum = document.createTextNode("comentarios");
     comentarios.append(comentariosnum);
     contenedorEmojis.append(emoji1, emoji2, emoji3, emoji4, emoji5, reaccionesElement, comentarios);
     contenedorEmojisComentarios.append(contenedorEmojis);
 
-    contenedorPost.append(contenedorImagen, contenedorUsuario, contenedorTexto, contenedorEmojisComentarios);
+    index === 0 ? 
+    contenedorPost.append(contenedorImagen, contenedorUsuario, contenedorTexto, contenedorEmojisComentarios) :
+    contenedorPost.append(contenedorUsuario, contenedorTexto, contenedorEmojisComentarios);
 
     return contenedorPost;
 };
@@ -115,8 +117,8 @@ const imprimirPost = (arreglo, areaImpresion) => {
         contenedorPrincipal.removeChild(contenedorPrincipal.firstChild);
     };
 
-    arreglo.forEach((post) => {
-        contenedorPrincipal.append(creacionPost(post));
+    arreglo.forEach((post, index) => {
+        contenedorPrincipal.append(creacionPost(post, index));
     });
 };
 
@@ -127,3 +129,53 @@ const impresionPosts = async () => {
 };
 
 impresionPosts();
+
+//Filtrado de relevant posts
+let relevantBtn = document.getElementById("relevant");
+
+relevantBtn.addEventListener("click", async() => {
+    let arreglo = await traerPost();
+    let arregloFiltrado = arreglo.filter((post) => post.relevant === true);
+    console.log(arregloFiltrado);
+    imprimirPost(arregloFiltrado, "post-cards");
+});
+
+//Filtrado de latest post
+let latestBtn = document.getElementById("latest");
+
+latestBtn.addEventListener("click", async() => {
+    let arreglo = await traerPost();
+    let arregloOrdenado = arreglo.toSorted((a,b) => {
+        let x = a.date.toLowerCase();
+        let y = b.date.toLowerCase();
+        if (x > y) {return -1;}
+        if (x < y) {return 1;}
+        return 0;
+      }); 
+    let arregloPequeño = arregloOrdenado.slice(0,3);
+    console.log(arregloPequeño);
+    imprimirPost(arregloPequeño, "post-cards");
+});
+
+//Filtrado de top
+let topBtn = document.getElementById("top");
+
+topBtn.addEventListener("click", async() => {
+    let arreglo = await traerPost();
+    let arregloFiltrado = arreglo.filter((post) => post.rating >= 9);
+    console.log(arregloFiltrado);
+    imprimirPost(arregloFiltrado, "post-cards");
+});
+
+//Filtrado del buscador
+let buscador = document.getElementById("filter-post");
+
+buscador.addEventListener("keyup", async(event) => {
+    let consulta = event.target.value;
+    let arreglo = await traerPost();
+    let result = arreglo.filter((post) => {
+        return post.title.toLowerCase().includes(consulta.toLowerCase());
+    });
+    console.log(result);
+    imprimirPost(result, "post-cards");
+});
