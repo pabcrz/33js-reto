@@ -16,7 +16,7 @@ let createPostsCard = (postsObject) =>{
     let emojisCard = document.createElement("img")
     emojisCard.setAttribute("src", "https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg")
 
-    let laFecha = documento.createElement("p")
+    let laFecha = document.createElement("p")
     laFecha.classList.add("post-fecha")
     laFecha.innerText = date
 
@@ -50,17 +50,5 @@ let createPostsCard = (postsObject) =>{
   
   return postsCard
 }
-const printPosts= (productsArray, wrapperId) => {
-    let wrapper = document.getElementById(wrapperId);
-    //wrapper.innerHTML = "";
-    productsArray.forEach((product) => {
-      wrapper.append(createPostsCard(product));
-    });
-  };
 
-const printAllPosts = async () => {
-    let postsArray = await fetchAllPosts()
-    printPosts(petShopArray, "post-cars-wrapper")
-}
-
-printAllPosts()
+export {createPostsCard}

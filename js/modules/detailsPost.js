@@ -1,4 +1,4 @@
-import { fetchPostByKey } from "../modules/api/devtoAPi";
+import { fetchPostByKey } from "../modules/api/devtoAPi.js";
 
 const url = window.location.href;
 
@@ -8,7 +8,8 @@ let postKey = params.get("postKey");
 console.log(postKey);
 
 const printPostData = async (postKey) => {
-    let postData = await fetchPostByKey(postKey);
+    
+  let postData = await fetchPostByKey(postKey);
     console.log(postData);
     let {
      author,
