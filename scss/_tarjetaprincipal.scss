@@ -10,6 +10,7 @@
     width: 100%;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    object-fit: cover;
   }
 }
 
@@ -25,12 +26,18 @@
   h4 {
     font-weight: 400;
     font-size: 15px;
-    padding: 8px 5px;
     border-radius: 5px;
   }
   h4:hover {
     background-color: $border-color;
   }
+}
+
+.name-date {
+  margin-left: 3.5rem;
+  line-height: 1;
+  margin-top: 1rem;
+  text-align: start;
 }
 
 .content-card2 {
@@ -65,7 +72,7 @@
   top: .5rem;
   left: 25px;
   img {
-    max-width: 20px;
+    max-width: 35px;
     border: solid 2px white;
   }
 }
