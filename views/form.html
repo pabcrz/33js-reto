@@ -53,6 +53,7 @@
               type="text"
               placeholder="New post title here..."
               name="title"
+              required
             />
           </div>
           <div class="my-3">
@@ -69,24 +70,29 @@
                 class="form-control border-0 shadow-none"
                 name="author"
                 placeholder="Author's name"
+                required
               />
             </div>
           </div>
         </div>
-        <div class="row g-3 my-1 px-3 px-md-5 reactions-date">
+        <div class="row g-3 my-1 px-3 px-md-5 relevant-date">
           <div class="col-4 col-lg-2 mb-3">
             <input
-              type="number"
-              class="form-control border-0 shadow-none"
-              placeholder="Reactions"
-              name="reactions"
+              class="form-check-input border-0 shadow"
+              type="checkbox"
+              value=""
+              name="relevant"
             />
+            <label class="form-check-label" for="flexCheckDefault">
+              Relevant
+            </label>
           </div>
           <div class="col-5 col-lg-3 mb-3">
             <input
               type="date"
               class="form-control border-0 shadow-none"
               name="date"
+              required
             />
           </div>
         </div>

@@ -1,14 +1,3 @@
-//Funcion para traer los posts de la DB
-const traerPost = async () => {
-    let response = await fetch("https://reto-js-10b99-default-rtdb.firebaseio.com/blogDevTo/.json");
-    let posts = await response.json();
-    let keys = Object.keys(posts);
-    let arregloPosts = keys.map((key) => {
-        return {...posts[key], key};
-    });
-    return arregloPosts;
-};
-
 //Crear el DOM para los post
 const creacionPost = (post,index) => {
     let {coverPost, avatar, author, date, title, tags, reactions} = post;
@@ -179,3 +168,49 @@ buscador.addEventListener("keyup", async(event) => {
     console.log(result);
     imprimirPost(result, "post-cards");
 });
+
+//Filtrado del Hastag
+const arregloReducido = async (tag) => {
+    let arreglo = await traerPost();
+    let nuevoArreglo = arreglo.filter((post) => {
+        return post.tags.includes(tag);
+    });
+    let arregloPequeño = nuevoArreglo.slice(0,5);
+    return arregloPequeño;
+};
+
+//Crecaion del Dom
+const creacionTitulo = (post) => {
+    let {title} = post
+    
+    let tituloHastag = document.createElement("a");
+    tituloHastag.classList.add("discussItem");
+    tituloHastag.setAttribute("src", "../index.html");
+    let tituloText = document.createTextNode(title);
+
+    tituloHastag.append(tituloText);
+    return tituloHastag;
+};
+
+//Impresion de titulos
+const printListItems = (arreglo, contenedor) => {
+    let contenedorPrincipal = document.getElementById(contenedor);
+
+    while (contenedorPrincipal.firstChild) {
+        contenedorPrincipal.removeChild(contenedorPrincipal.firstChild);
+    };
+
+    arreglo.forEach((post) => {
+        contenedorPrincipal.append(creacionTitulo(post));
+    });   
+};
+
+//Mostrar en DOM
+const mostrarTitulos = async() => {
+    let result = await arregloReducido("css");
+    printListItems(result, "hastags-contenedor");
+};
+
+mostrarTitulos();
+
+import { traerPost } from "./modules/api/devtoAPi.js";
