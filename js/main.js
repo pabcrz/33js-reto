@@ -1,14 +1,3 @@
-//Funcion para traer los posts de la DB
-const traerPost = async () => {
-    let response = await fetch("https://reto-js-10b99-default-rtdb.firebaseio.com/blogDevTo/.json");
-    let posts = await response.json();
-    let keys = Object.keys(posts);
-    let arregloPosts = keys.map((key) => {
-        return {...posts[key], key};
-    });
-    return arregloPosts;
-};
-
 //Crear el DOM para los post
 const creacionPost = (post,index) => {
     let {coverPost, avatar, author, date, title, tags, reactions} = post;
@@ -181,15 +170,17 @@ buscador.addEventListener("keyup", async(event) => {
 });
 
 //Filtrado del Hastag
-/*const filtradoPorTag =  (arreglo, tag) => {
-    let result = arreglo.filter((post) => {
-        return post.tags.includes(tag); // Devuelve el resultado de includes(tag)
+const arregloReducido = async (tag) => {
+    let arreglo = await traerPost();
+    let nuevoArreglo = arreglo.filter((post) => {
+        return post.tags.includes(tag);
     });
-    console.log(result);
+    let arregloPequeño = nuevoArreglo.slice(0,5);
+    return arregloPequeño;
 };
-filtradoPorTag(traerPost(), "css");*/
+
 //Crecaion del Dom
-/*const creacionTitulo = (post) => {
+const creacionTitulo = (post) => {
     let {title} = post
     
     let tituloHastag = document.createElement("a");
@@ -199,20 +190,27 @@ filtradoPorTag(traerPost(), "css");*/
 
     tituloHastag.append(tituloText);
     return tituloHastag;
-};*/
+};
 
-//const filterByTag = ( arreglo, tag) => {
-    //let result = arreglo.filter( elemento => elemento.tags.includes(tag))
-    //return result
-//}
+//Impresion de titulos
+const printListItems = (arreglo, contenedor) => {
+    let contenedorPrincipal = document.getElementById(contenedor);
 
-/*const printListItems = (arreglo, wrapper) => {
-    /*vaciar el arreglo*/
+    while (contenedorPrincipal.firstChild) {
+        contenedorPrincipal.removeChild(contenedorPrincipal.firstChild);
+    };
 
-    /*llenar el wrapper con los elementos del array*/
-    /*arreglo.forEach( elemento => {
-        wrapper.append( createListItem( object))
-    })
-}
+    arreglo.forEach((post) => {
+        contenedorPrincipal.append(creacionTitulo(post));
+    });   
+};
 
-printListItems( filterByTag("css"), "el id de la lista de css")*/
+//Mostrar en DOM
+const mostrarTitulos = async() => {
+    let result = await arregloReducido("css");
+    printListItems(result, "hastags-contenedor");
+};
+
+mostrarTitulos();
+
+import { traerPost } from "./modules/api/devtoAPi.js";
