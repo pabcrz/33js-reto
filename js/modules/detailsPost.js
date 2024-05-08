@@ -11,26 +11,23 @@ const printPostData = async (postKey) => {
     let postData = await fetchPostByKey(postKey);
     console.log(postData);
     let {
-      autor,
-      fecha,
-      fotoPerfil,
-      logo,
-      picture,
-      reaccionesYasi,
-      tags,
-      titulo,
-      contenido
+     author,
+     content,
+     coverPost,
+     date,
+     reactions,
+     tags,
+     title
     } = postData;
   
-    document.getElementById("post-picture").setAttribute("src", picture);
-    document.getElementById("logo-name").innerText = logo;
+    document.getElementById("post-picture").setAttribute("src", coverPost);
     document.getElementById("foto-profile").innerText = fotoPerfil;
-    document.getElementById("autor-post").innerText = autor;
-    document.getElementById("post-fecha").innerText = fecha;
-    document.getElementById("titulo-post").innerText = titulo;
-    document.getElementById("post-contenido").innerText = contenido;
+    document.getElementById("autor-post").innerText = author;
+    document.getElementById("post-fecha").innerText = date;
+    document.getElementById("titulo-post").innerText = title;
+    document.getElementById("post-contenido").innerText = content;
     document.getElementById("post-hashtags").innerText = tags;
-    document.getElementById("reacciones").innerText = reaccionesYasi;
+    document.getElementById("reacciones").innerText = reactions;
 }
 
 printPostData(postKey)
