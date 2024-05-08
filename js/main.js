@@ -179,3 +179,40 @@ buscador.addEventListener("keyup", async(event) => {
     console.log(result);
     imprimirPost(result, "post-cards");
 });
+
+//Filtrado del Hastag
+/*const filtradoPorTag =  (arreglo, tag) => {
+    let result = arreglo.filter((post) => {
+        return post.tags.includes(tag); // Devuelve el resultado de includes(tag)
+    });
+    console.log(result);
+};
+filtradoPorTag(traerPost(), "css");*/
+//Crecaion del Dom
+/*const creacionTitulo = (post) => {
+    let {title} = post
+    
+    let tituloHastag = document.createElement("a");
+    tituloHastag.classList.add("discussItem");
+    tituloHastag.setAttribute("src", "../index.html");
+    let tituloText = document.createTextNode(title);
+
+    tituloHastag.append(tituloText);
+    return tituloHastag;
+};*/
+
+//const filterByTag = ( arreglo, tag) => {
+    //let result = arreglo.filter( elemento => elemento.tags.includes(tag))
+    //return result
+//}
+
+/*const printListItems = (arreglo, wrapper) => {
+    /*vaciar el arreglo*/
+
+    /*llenar el wrapper con los elementos del array*/
+    /*arreglo.forEach( elemento => {
+        wrapper.append( createListItem( object))
+    })
+}
+
+printListItems( filterByTag("css"), "el id de la lista de css")*/

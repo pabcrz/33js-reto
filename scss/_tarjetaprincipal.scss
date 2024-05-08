@@ -62,7 +62,7 @@
 }
 .profile {
   position: absolute;
-  top: 25px;
+  top: .5rem;
   left: 25px;
   img {
     max-width: 20px;
@@ -186,4 +186,9 @@
   p {
     font-size: 13px;
   }
+}
+
+.name-date {
+  margin-left: 3.5rem;
+  line-height: .5;
 }

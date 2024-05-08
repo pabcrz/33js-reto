@@ -38,12 +38,14 @@
       <div class="containerNav">
         <nav class="container-flex-row navbar">
           <div class="container-flex-row">
-            <img
-              class="imagen"
-              src="./img/resized_logo_UQww2soKuUsjaOGNB38o.png"
-            />
+            <a href="index.html">
+              <img
+                class="imagen"
+                src="./img/resized_logo_UQww2soKuUsjaOGNB38o.png"
+              />
+            </a>
             <div>
-              <input class="input-text" type="text" placeholder="Search..." />
+              <input id="filter-post" class="input-text" type="text" placeholder="Search..." />
             </div>
           </div>
           <div class="container-flex-row">
@@ -1042,19 +1044,14 @@
             <!-- Aquie estan los botones relevant, lates, top -->
             <div class="center-buttons">
               <div class="center-button">
-                <p>Relevant</p>
+                <button id="relevant" class="boton">Relevant</button>
               </div>
               <div class="center-button">
-                <p>Latest</p>
+                <button id="latest" class="boton">Latest</button>
               </div>
               <div class="center-button">
-                <p>Top</p>
+                <button id="top" class="boton">Top</button>
               </div>
-
-              <!-- Este boton es para recargar la pagina -->
-              <button class="reload" onclick="location.reload()">
-                <img src="/img/refresh.svg" alt="" />
-              </button>
             </div>
 
             <!-- Aqui van los posts
@@ -1142,56 +1139,13 @@
             <!-- Hashtag section 13-->
             <section class="discuss">
               <div class="discussHeader">
-                <a href="#">#discuss</a>
+                <a href="#">#css</a>
                 <p>Discussion threads targeting the whole community</p>
               </div>
-              <div class="items">
-                <a href="#" class="discussItem">
-                  Open Source Impact: Reflecting on 2023 Contributions
-                  <p class="discussComment">1 comment</p>
-                </a>
-                <a href="#" class="discussItem">
-                  Is tech boring lately or is it me?? 😐
-                  <p class="discussComment">7 comments</p>
-                </a>
-                <a href="#" class="discussItem">
-                  Meme Monday
-                  <p class="discussComment">2 comments</p>
-                </a>
-                <a href="#" class="discussItem">
-                  Frontend devs, what are your thoughts on WordPress? Have you
-                  used it in your corporate jobs?
-                  <p class="discussComment">27 comments</p>
-                </a>
+              <div id="hastags-contenedor" class="items">
+                
                 <a href="#" class="discussItem">
                   🎬🍿What's Your Favorite Holiday Film?
-                  <p class="discussComment">11 comments</p>
-                </a>
-              </div>
-            </section>
-
-            <!-- Aqui va la parte de los tags, mostrar los primeros 5 -->
-            <section class="watercooler">
-              <div class="waterHeader">
-                <a href="#">#watercooler</a>
-                <p>Light, and off-topic conversation.</p>
-              </div>
-              <div class="items">
-                <a href="#" class="discussItem">
-                  Is tech boring lately or is it me?? 😐
-                  <p class="discussComment">7 comments</p>
-                </a>
-                <a href="#" class="discussItem">
-                  Meme Monday
-                  <p class="discussComment">2 comments</p>
-                </a>
-                <a href="#" class="discussItem">
-                  Music Monday --What are you listening to? (Beats Edition)
-                  <p class="discussComment">11 comments</p>
-                </a>
-                <a href="#" class="discussItem">
-                  Caption This! 🤔💭
-                  <p class="discussComment">27 comments</p>
                 </a>
               </div>
             </section>

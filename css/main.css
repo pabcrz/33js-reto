@@ -91,6 +91,16 @@ body {
   justify-content: center;
 }
 
+.boton {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.boton:hover {
+  color: blue;
+}
+
 @media (max-width: 776px) {
   .right-aside,
   .left-aside,
@@ -380,7 +390,7 @@ body {
 
 .profile {
   position: absolute;
-  top: 25px;
+  top: 0.5rem;
   left: 25px;
 }
 .profile img {
@@ -503,6 +513,11 @@ body {
 
 .save p {
   font-size: 13px;
+}
+
+.name-date {
+  margin-left: 3.5rem;
+  line-height: 0.5;
 }
 
 .container-flex-row {
