@@ -2,7 +2,8 @@ import { traerPost } from "./modules/api/devtoAPi.js";
 
 //Crear el DOM para los post
 const creacionPost = (post,index) => {
-    let {coverPost, avatar, author, date, title, tags, reactions, key} = post;
+    let {coverPost, author, date, title, tags, reactions, key} = post;
+    let avatar = "https://randomuser.me/api/portraits/men/1.jpg"
 
     //**Contenedor de un post
     let contenedorPost = document.createElement("div");
