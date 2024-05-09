@@ -1,6 +1,8 @@
+import { traerPost } from "./modules/api/devtoAPi.js";
+
 //Crear el DOM para los post
 const creacionPost = (post,index) => {
-    let {coverPost, avatar, author, date, title, tags, reactions} = post;
+    let {coverPost, avatar, author, date, title, tags, reactions, key} = post;
 
     //**Contenedor de un post
     let contenedorPost = document.createElement("div");
@@ -91,8 +93,13 @@ const creacionPost = (post,index) => {
     contenedorEmojis.append(emoji1, emoji2, emoji3, emoji4, emoji5, reaccionesElement, comentarios);
     contenedorEmojisComentarios.append(contenedorEmojis);
 
+    let toDetails = document.createElement("a");
+    toDetails.setAttribute("href", `../views/detailsPost.html?postKey=${key}`);
+
+    toDetails.append(contenedorTexto)
+
     index === 0 ? 
-    contenedorPost.append(contenedorImagen, contenedorUsuario, contenedorTexto, contenedorEmojisComentarios) :
+    contenedorPost.append(contenedorImagen, contenedorUsuario, toDetails, contenedorEmojisComentarios) :
     contenedorPost.append(contenedorUsuario, contenedorTexto, contenedorEmojisComentarios);
 
     return contenedorPost;
@@ -213,4 +220,3 @@ const mostrarTitulos = async() => {
 
 mostrarTitulos();
 
-import { traerPost } from "./modules/api/devtoAPi.js";
