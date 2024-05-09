@@ -760,6 +760,13 @@ a:visited {
   border-top: 5px;
 }
 
+#contenedor-aside {
+  border-radius: 15px;
+}
+#contenedor-aside #aside-izquierdo {
+  border-top: 20px solid black;
+}
+
 .col-12 {
   border: none;
 }

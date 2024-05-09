@@ -94,13 +94,15 @@ const creacionPost = (post,index) => {
     contenedorEmojisComentarios.append(contenedorEmojis);
 
     let toDetails = document.createElement("a");
+    toDetails.classList.add("linkToPost")
     toDetails.setAttribute("href", `../views/detailsPost.html?postKey=${key}`);
+    toDetails.style.textDecoration = 'none'
     console.log('key,',key)
     toDetails.append(contenedorTexto)
 
     index === 0 ? 
     contenedorPost.append(contenedorImagen, contenedorUsuario, toDetails, contenedorEmojisComentarios) :
-    contenedorPost.append(contenedorUsuario, contenedorTexto, contenedorEmojisComentarios);
+    contenedorPost.append(contenedorUsuario, toDetails, contenedorEmojisComentarios);
 
     return contenedorPost;
 };
