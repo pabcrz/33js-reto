@@ -768,11 +768,18 @@ a:visited {
   border-top: 5px;
 }
 
-#contenedor-aside {
-  border-radius: 15px;
+#main-content {
+  margin-right: -10px;
+  margin-left: -10px;
 }
-#contenedor-aside #aside-izquierdo {
+#main-content #contenedor-aside #aside-derecho {
   border-top: 20px solid black;
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+#main-content #contenedor-aside #aside-derecho #The-dev:hover {
+  color: blue;
 }
 
 .col-12 {
