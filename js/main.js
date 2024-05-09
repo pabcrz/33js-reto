@@ -85,7 +85,7 @@ const creacionPost = (post,index) => {
     //Otros
     let reaccionesElement = document.createElement("span");
     reaccionesElement.classList.add("reaction-post");
-    let reaccionesnum = document.createTextNode(reactions);
+    let reaccionesnum = document.createTextNode(`${reactions} reactions`);
     reaccionesElement.append(reaccionesnum);
     let comentarios = document.createElement("span");
     comentarios.classList.add("comments-post");
