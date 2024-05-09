@@ -31,6 +31,5 @@ const printPostData = async (postKey) => {
     document.getElementById("reacciones").innerText = reactions
 
   }
-
-console.log(printPostData(""))
+printPostData(postKey)
 
