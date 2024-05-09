@@ -1,6 +1,8 @@
+import { traerPost } from "./modules/api/devtoAPi.js";
+
 //Crear el DOM para los post
 const creacionPost = (post,index) => {
-    let {coverPost, avatar, author, date, title, tags, reactions,key} = post;
+    let {coverPost, avatar, author, date, title, tags, reactions, key} = post;
 
     //**Contenedor de un post
     let contenedorPost = document.createElement("div");
@@ -218,4 +220,3 @@ const mostrarTitulos = async() => {
 
 mostrarTitulos();
 
-import { traerPost } from "./modules/api/devtoAPi.js";

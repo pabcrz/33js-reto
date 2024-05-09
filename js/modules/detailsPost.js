@@ -23,7 +23,6 @@ const printPostData = async (postKey) => {
     } = postData;
   
     document.getElementById("post-picture").setAttribute("src", coverPost);
-    document.getElementById("foto-profile").setAttribute ("src", fotoPerfil)
     document.getElementById("autor-post").innerText = author;
     document.getElementById("post-fecha").innerText = date;
     document.getElementById("titulo-post").innerText = title;
@@ -33,5 +32,5 @@ const printPostData = async (postKey) => {
 
   }
 
-console.log(printPostData("-NxGFEU2mIb2wEDGkXaTpostKey"))
+console.log(printPostData(""))
 
