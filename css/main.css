@@ -731,4 +731,103 @@ a:visited {
 
 #dev-titulo {
   border-top: 5px;
+}
+
+.col-12 {
+  border: none;
+}
+
+.card .btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.card .btn {
+  border: gray;
+}
+
+.small-centered-img {
+  max-width: 70px;
+  max-height: 70px;
+  margin: auto;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.card {
+  padding: 1%;
+  border: 50px solid gray;
+}
+
+div a {
+  color: blue;
+  text-decoration: underline;
+}
+
+div a:hover {
+  color: darkblue;
+}
+
+.checkbox-container span {
+  float: right;
+}
+
+.checkbox-container input[type=checkbox] {
+  float: left;
+}
+
+.checkbox-container span {
+  color: blue;
+}
+
+.d-flex {
+  justify-content: center;
+  align-items: center;
+}
+.d-flex h6 i span {
+  color: blue;
+}
+
+.col-12 {
+  border: none;
+}
+
+.card .btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.card .btn {
+  border: gray;
+}
+
+.small-centered-img {
+  max-width: 70px;
+  max-height: 70px;
+  margin: auto;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.card {
+  padding: 1%;
+  border-radius: 1px solid gray;
+}
+
+div.card {
+  border: none;
+}
+
+.checkbox-container span {
+  color: blue;
+}
+
+.d-flex {
+  justify-content: center;
+  align-items: center;
+}
+.d-flex h6 i span {
+  color: blue;
 }/*# sourceMappingURL=main.css.map */
