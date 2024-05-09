@@ -95,7 +95,7 @@ const creacionPost = (post,index) => {
 
     let toDetails = document.createElement("a");
     toDetails.setAttribute("href", `../views/detailsPost.html?postKey=${key}`);
-
+    console.log('key,',key)
     toDetails.append(contenedorTexto)
 
     index === 0 ? 
