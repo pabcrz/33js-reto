@@ -1,36 +1,36 @@
-import { fetchPostByKey } from "../modules/api/devtoAPi";
+import { fetchPostByKey } from "../modules/api/devtoAPi.js";
+
 
 const url = window.location.href;
-
+console.log(url)
 const params = new URLSearchParams(new URL(url).search);
 
 let postKey = params.get("postKey");
 console.log(postKey);
 
 const printPostData = async (postKey) => {
-    let postData = await fetchPostByKey(postKey);
+    
+  let postData = await fetchPostByKey(postKey);
     console.log(postData);
-    let {
-      autor,
-      fecha,
-      fotoPerfil,
-      logo,
-      picture,
-      reaccionesYasi,
-      tags,
-      titulo,
-      contenido
+  let {
+    author,
+     content,
+     coverPost,
+     date,
+     reactions,
+     tags,
+     title
     } = postData;
   
-    document.getElementById("post-picture").setAttribute("src", picture);
-    document.getElementById("logo-name").innerText = logo;
-    document.getElementById("foto-profile").innerText = fotoPerfil;
-    document.getElementById("autor-post").innerText = autor;
-    document.getElementById("post-fecha").innerText = fecha;
-    document.getElementById("titulo-post").innerText = titulo;
-    document.getElementById("post-contenido").innerText = contenido;
+    document.getElementById("post-picture").setAttribute("src", coverPost);
+    document.getElementById("autor-post").innerText = author;
+    document.getElementById("post-fecha").innerText = date;
+    document.getElementById("titulo-post").innerText = title;
+    document.getElementById("post-contenido").innerText = content;
     document.getElementById("post-hashtags").innerText = tags;
-    document.getElementById("reacciones").innerText = reaccionesYasi;
-}
+    document.getElementById("reacciones").innerText = reactions
 
-printPostData(postKey)
+  }
+
+console.log(printPostData(""))
+

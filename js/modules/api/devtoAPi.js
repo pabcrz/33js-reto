@@ -21,12 +21,6 @@ const createPosts = async (postObject) => {
   return data;
 };
 
-const fetchPostByKey = async (postKey) => {
-  let response = await fetch(`${BASE_URL}/${postKey}/.json`);
-  let data = await response.json();
-  return data;
-};
-
 const fetchAllPosts = async () => {
   let response = await fetch(`${BASE_URL}/.json`);
   let data = await response.json();
@@ -34,5 +28,12 @@ const fetchAllPosts = async () => {
   let postsArray = keys.map((key) => ({ ...data[key], key }));
   return postsArray;
 };
+
+const fetchPostByKey = async (postKey) => {
+  let response = await fetch(`${BASE_URL}/${postKey}/.json`);
+  let data = await response.json();
+  return data;
+};
+
 
 export { createPosts, fetchPostByKey, fetchAllPosts };
