@@ -15,18 +15,20 @@
 }
 
 .content-card {
-  padding: 16px;
   display: flex;
   flex-direction: row;
   p {
     color: $secondary-text;
     font-size: 12px;
     margin-top: 5px;
+    margin-left: .5rem;
   }
   h4 {
     font-weight: 400;
     font-size: 15px;
     border-radius: 5px;
+    margin-left: .5rem;
+    margin-bottom: .9rem;
   }
   h4:hover {
     background-color: $border-color;
@@ -157,9 +159,6 @@
   .emojis:hover {
     background-color: $bgMain;
   }
-  span {
-    margin: 0 3px;
-  }
 }
 .emojis {
   display: flex;
@@ -198,4 +197,7 @@
 .name-date {
   margin-left: 3.5rem;
   line-height: .5;
+}
+.comments-post {
+  margin-left: 1.7rem;
 }
