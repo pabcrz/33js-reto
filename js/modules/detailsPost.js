@@ -1,7 +1,8 @@
 import { fetchPostByKey } from "../modules/api/devtoAPi.js";
 
-const url = window.location.href;
 
+const url = window.location.href;
+console.log(url)
 const params = new URLSearchParams(new URL(url).search);
 
 let postKey = params.get("postKey");
@@ -11,8 +12,8 @@ const printPostData = async (postKey) => {
     
   let postData = await fetchPostByKey(postKey);
     console.log(postData);
-    let {
-     author,
+  let {
+    author,
      content,
      coverPost,
      date,
@@ -22,14 +23,15 @@ const printPostData = async (postKey) => {
     } = postData;
   
     document.getElementById("post-picture").setAttribute("src", coverPost);
-    document.getElementById("foto-profile").innerText = fotoPerfil;
+    document.getElementById("foto-profile").setAttribute ("src", fotoPerfil)
     document.getElementById("autor-post").innerText = author;
     document.getElementById("post-fecha").innerText = date;
     document.getElementById("titulo-post").innerText = title;
     document.getElementById("post-contenido").innerText = content;
     document.getElementById("post-hashtags").innerText = tags;
-    document.getElementById("reacciones").innerText = reactions;
-}
+    document.getElementById("reacciones").innerText = reactions
 
-printPostData(postKey)
+  }
+
+console.log(printPostData("-NxGFEU2mIb2wEDGkXaTpostKey"))
 
