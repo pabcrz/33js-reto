@@ -38,29 +38,39 @@
       <div class="containerNav">
         <nav class="container-flex-row navbar">
           <div class="container-flex-row">
-            <a href="index.html">
-              <img
-                class="imagen"
-                src="./img/resized_logo_UQww2soKuUsjaOGNB38o.png"
-              />
-            </a>
+            <img
+              class="imagen"
+              src="./img/resized_logo_UQww2soKuUsjaOGNB38o.png"
+            />
             <div>
-              <input
-                id="filter-post"
-                class="input-text"
-                type="text"
-                placeholder="Search..."
-              />
+              <input class="input-text" type="text" placeholder="Search..." />
             </div>
           </div>
           <div class="container-flex-row">
             <div class="login">
-              <a id="login-form" href="./views/login.html">Log in</a>
+              <a id="login-form" href="./views/login.html"> </a>
             </div>
 
             <div class="botton-link">
-              <a href="./views/createAccount.html">Create account</a>
+              <a href="./views/form.html">Create Post</a>
             </div>
+
+            <div class="logo" width: 30px;>
+            <svg
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.0003 21H15.0003M18.0003 8.6C18.0003 7.11479 17.3682 5.69041 16.2429 4.6402C15.1177 3.59 13.5916 3 12.0003 3C10.409 3 8.88288 3.59 7.75766 4.6402C6.63245 5.69041 6.0003 7.11479 6.0003 8.6C6.0003 11.2862 5.32411 13.1835 4.52776 14.4866C3.75646 15.7486 3.37082 16.3797 3.38515 16.5436C3.40126 16.7277 3.4376 16.7925 3.58633 16.9023C3.71872 17 4.34793 17 5.60636 17H18.3943C19.6527 17 20.2819 17 20.4143 16.9023C20.563 16.7925 20.5994 16.7277 20.6155 16.5436C20.6298 16.3797 20.2441 15.7486 19.4729 14.4866C18.6765 13.1835 18.0003 11.2862 18.0003 8.6Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
         </nav>
       </div>
@@ -1049,14 +1059,19 @@
             <!-- Aquie estan los botones relevant, lates, top -->
             <div class="center-buttons">
               <div class="center-button">
-                <button id="relevant" class="boton">Relevant</button>
+                <p>Relevant</p>
               </div>
               <div class="center-button">
-                <button id="latest" class="boton">Latest</button>
+                <p>Latest</p>
               </div>
               <div class="center-button">
-                <button id="top" class="boton">Top</button>
+                <p>Top</p>
               </div>
+
+              <!-- Este boton es para recargar la pagina -->
+              <button class="reload" onclick="location.reload()">
+                <img src="/img/refresh.svg" alt="" />
+              </button>
             </div>
 
             <!-- Aqui van los posts
@@ -1064,42 +1079,84 @@
             Dentro tiene class="card-post" que tiene todo el contenido de los posts-->
 
             <div id="post-cards">
-               <div class="card-post">
+              <a href="./views/detailsPost.html">
+                <div class="card-post">
                   <div class="head">
-                    <img class="imagen-post" src="">
-                </div>
-                <div class="content-card">
-                    <div class="logo-image">
-                        <div class="profile">
-                            <img src="">
-                        </div>
+                    <img
+                      id="post-picture"
+                      class="imagen-post"
+                      src="https://picsum.photos/700/400?random=1"
+                    />
+                  </div>
+                  <div class="content-card">
+                    <div id="logo-name" class="logo-image">
+                      <div class="taipy-logo">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--q8gYXd8Q--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/7841/eb7a94b7-7bd9-4097-b7e9-132785adc6db.png"
+                        />
+                      </div>
+                      <div class="foto-profile">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZMDQfkJE--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1177677/4947a9f8-ba30-4008-9f77-4b08c5b1c901.jpg"
+                        />
+                      </div>
                     </div>
-                    <div class="name-date">
-                        <h4 class="autor"></h4>
-                        <p class="fecha"></p>
+                    <div id="autor-Post" class="name-date">
+                      <h4 class="autor">Pablo Cruz</h4>
+                      <p id="post-fecha" class="fecha">2024-03-25</p>
                     </div>
-                </div>
-                <div class="content-card2">
-                    <h3 class="titulo-post"></h3>
-                    <div class="hashtags">
-                        <span class="hastag"></span>
-                        <span class="hastag"></span>
-                       
+                  </div>
+                  <div class="content-card2">
+                    <h3 id="titulo-post" class="titulo-post">reto JS</h3>
+                    <p id="post-contenido" class="contenido-post">
+                      Lorem ipsum dolor sit amet. Qui tempora omnis et
+                      temporibus placeat est voluptas odio qui suscipit facere
+                      ea rerum explicabo aut numquam quia sed voluptas sequi. Et
+                      exercitationem eaque non dolor nemo qui sequi tempore et
+                      dignissimos Quis. Ut dignissimos sunt et similique
+                      deleniti eos esse placeat qui accusamus minus rem quam
+                      officiis qui mollitia aperiam hic neque iste. Ut officia
+                      suscipit ad obcaecati Quis in quod veritatis et incidunt
+                      animi et officiis debitis rem autem omnis et consequatur
+                      aliquid. &lt;/p&gt;&lt;p&gt;Vel repudiandae consequatur
+                      vel laborum adipisci sit quae tenetur et autem magnam ad
+                      excepturi quam qui odio facilis? Et repellat iure non
+                      rerum cumque 33 modi modi et cumque iure.
+                      &lt;/p&gt;&lt;p&gt;33 eius accusamus sed Quis quibusdam
+                      vel assumenda quas! Et officia dolores et perferendis
+                      illum qui quidem similique eos nobis accusantium aut quia
+                      tempore et minima vitae? Ab iure beatae quo vitae
+                      recusandae ut accusantium expedita et quidem eius aut
+                      maxime laboriosam. Est repellendus perferendis et
+                      cupiditate suscipit est officia natus ea itaque quaerat
+                      est eius ratione.
+                    </p>
+                    <div id="post-hashtags" class="hashtags">
+                      <span>html</span><span>js</span><span>css</span>
                     </div>
-                    <div class="content-text">
-                        <p class="content-post"></p>
-                    </div>
-                </div>
-                <div class="reactions">
+                  </div>
+                  <div id="reacciones" class="reactions">
                     <div class="emojis-reaction">
-                        <img src="">
-                        <img src="">
-                       
-                        <span class="reaction-post"></span>
-                        <span class="comments-post"></span>
+                      <img
+                        src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg"
+                      /><img
+                        src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg"
+                      /><img
+                        src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg"
+                      /><img
+                        src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg"
+                      /><img
+                        src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg"
+                      /><span class="reaction-post">23 reacciones</span
+                      ><span class="comments-post">23 comentarios</span>
                     </div>
+                    <div class="delete-update">
+                      <button class="button-delete">Delete</button
+                      ><button class="button-update">Update</button>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </a>
             </div>
           </div>
           <!-- Right Aside -->
@@ -1107,10 +1164,58 @@
             <!-- Hashtag section 13-->
             <section class="discuss">
               <div class="discussHeader">
-                <a href="#">#css</a>
+                <a href="#">#discuss</a>
                 <p>Discussion threads targeting the whole community</p>
               </div>
-              <div id="hastags-contenedor" class="items"></div>
+              <div class="items">
+                <a href="#" class="discussItem">
+                  Open Source Impact: Reflecting on 2023 Contributions
+                  <p class="discussComment">1 comment</p>
+                </a>
+                <a href="#" class="discussItem">
+                  Is tech boring lately or is it me?? 😐
+                  <p class="discussComment">7 comments</p>
+                </a>
+                <a href="#" class="discussItem">
+                  Meme Monday
+                  <p class="discussComment">2 comments</p>
+                </a>
+                <a href="#" class="discussItem">
+                  Frontend devs, what are your thoughts on WordPress? Have you
+                  used it in your corporate jobs?
+                  <p class="discussComment">27 comments</p>
+                </a>
+                <a href="#" class="discussItem">
+                  🎬🍿What's Your Favorite Holiday Film?
+                  <p class="discussComment">11 comments</p>
+                </a>
+              </div>
+            </section>
+
+            <!-- Aqui va la parte de los tags, mostrar los primeros 5 -->
+            <section class="watercooler">
+              <div class="waterHeader">
+                <a href="#">#watercooler</a>
+                <p>Light, and off-topic conversation.</p>
+              </div>
+              <div class="items">
+                <a href="#" class="discussItem">
+                  Is tech boring lately or is it me?? 😐
+                  <p class="discussComment">7 comments</p>
+                </a>
+                <a href="#" class="discussItem">
+                  Meme Monday
+                  <p class="discussComment">2 comments</p>
+                </a>
+                <a href="#" class="discussItem">
+                  Music Monday --What are you listening to? (Beats Edition)
+                  <p class="discussComment">11 comments</p>
+                </a>
+                <a href="#" class="discussItem">
+                  Caption This! 🤔💭
+                  <p class="discussComment">27 comments</p>
+                </a>
+              </div>
             </section>
 
             <!-- trending list 14-->
