@@ -28,7 +28,7 @@ const printPostData = async (postKey) => {
     document.getElementById("titulo-post").innerText = title;
     document.getElementById("post-contenido").innerText = content;
     document.getElementById("post-hashtags").innerText = tags;
-    document.getElementById("reacciones").innerText = reactions
+    document.getElementById("reacciones").innerText = `${reactions} comentarios`
 
   }
 printPostData(postKey)
