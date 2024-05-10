@@ -79,7 +79,7 @@ const creacionPost = (post) => {
   let contenedorFotoUsuario = document.createElement("div");
   contenedorFotoUsuario.classList.add("profile");
   let imagenUsuario = document.createElement("img");
-  imagenUsuario.setAttribute("src", avatar);
+  imagenUsuario.setAttribute("src", "https://randomuser.me/api/portraits/men/1.jpg)")
   contenedorFotoUsuario.append(imagenUsuario);
   contenedorFotos.append(contenedorFotoUsuario);
   //Contenedor de datos del post
