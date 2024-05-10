@@ -6,7 +6,7 @@
   border: solid 1px $border-color;
   border-radius: 8px;
   background-color: $bg-discuss;
-  max-width: 100%;
+  width: 100%;
   margin-top: 15px;
   a {
     display: flex;
@@ -42,4 +42,7 @@
     margin-top: 5px;
     font-size: 13.5px;
   }
+}
+.hastag {
+  font-size: .9rem;
 }

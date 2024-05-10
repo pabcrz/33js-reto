@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div id="mainContainer">
+      <div class="containerNav">
+        <nav class="container-flex-row navbar">
+          <div class="container-flex-row">
+            <a href="../index.html"><img
+              class="imagen"
+              src="../img/resized_logo_UQww2soKuUsjaOGNB38o.png" 
+            />
+            <div></a>
+              <input class="input-text" type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="container-flex-row">
+            <div class="login">
+              <a href="">log in</a>
+            </div>
+            <div class="botton-link">
+              <a href="./form.html">New post</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row " id="main-content">
+          <div class="col-md-1 d-none d-md-block">
+            <div id="iconos-aside-izq" class="d-flex flex-column text-center mt-5">
+              <div class="p-2">
+                <img
+                  src="https://w7.pngwing.com/pngs/533/68/png-transparent-history-of-education-skill-drupal-8-learning-others-love-text-heart-thumbnail.png"
+                  alt="corazon-plus"
+                  width="25"
+                  height="25"
+                />
+                <p>200</p>
+              </div>
+              <div class="p-2">
+                <img
+                  class=""
+                  src="https://cdn.icon-icons.com/icons2/2385/PNG/512/comment_bubble_icon_144400.png"
+                  alt="comentarios"
+                  width="25"
+                  height="25"
+                />
+                <p>34</p>
+              </div>
+              <div class="p-2">
+                <img
+                  src="https://cdn.icon-icons.com/icons2/3138/PNG/512/bookmark_save_storage_basic_icon_192482.png"
+                  alt="guardar"
+                  width="25"
+                  height="25"
+                />
+                <p>34</p>
+              </div>
+              <div class="p-2">
+                <img
+                  src="https://cdn.icon-icons.com/icons2/2645/PNG/96/three_dots_icon_159804.png"
+                  alt="y etcetera"
+                  width="25"
+                  height="25"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <section class="main">
+              <div class="main-flex-container">
+                <div id="post-cards-wrapper">
+                  <div class="card-post">
+                    <div class="head">
+                      <img id="post-picture"class="imagen-post" src="" />
+                    </div>
+                    <div class="content-card">
+                      <div class="logo-image">
+                        <div class="profile">
+                          <img id="foto-profile"src="https://randomuser.me/api/portraits/men/1.jpg" alt="Foto"/>
+                        </div>
+                      </div>
+                      <div class="name-date">
+                        <h4 id="autor-post" class="autor"></h4>
+                        <p id="post-fecha" class="fecha"></p>
+                      </div>
+                    </div>
+                    <div class="content-card2">
+                      <h3 id="titulo-post" class="titulo-post"></h3>
+                      <div class="hashtags">
+                        <span id="post-hashtags"class="hastag"></span>
+                       
+                      </div>
+                      <div class="content-text">
+                        <p id="post-contenido"class="content-post"></p>
+                      </div>
+                    </div>
+                    <div class="reactions">
+                      <div class="emojis-reaction">
+                        <img src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg">
+                        <img src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg">
+                        <img src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg">
+                        <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg">
+                        <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg">
+                        <span id="reacciones" class="reaction-post"></span>
+                        <span class="comments-post"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div id="contenedor-aside"class="col-md-4 order-md-3">
+            <div class="container  m-2">
+              <div id="aside-derecho" class="rounded branded-7 p-4 pt-0 gap-4 grid"
+             >
+                <div class="-mt-4">
+                  <a id="The-dev"class="text-decoration-none text-dark" href="#" class="flex">
+                 <span><img src="../assets/favicon-32x32.png" ></span>
+                  <span class="mt-5">The DEV Team</span></a>
+                </div>
+                <button type="button" class="btn btn-primary  m-2 whitespace-nowrap w-100 ">Follow</button>
+                <p>
+                  Lorem ipsum dolor sit amet.❤️ <br><br>Qui tempora omnis et temporibus
+                  placeat est voluptas odio qui suscipit facere ea rerum
+                  explicabo aut numquam quia sed voluptas sequi. Et
+                  exercitationem eaque non dolor nemo qui sequi tempore et
+                  dignissimos Quis. Ut dignissimos sunt et similique deleniti
+                  eos esse placeat qui accusamus minus rem quam officiis qui
+                  mollitia aperiam hic neque iste.
+                </p>
+                <button class="btn btn-outline-dark border border-dark crayons-btn--outlined w-100">
+                  Contribute to Forem
+                </button>
+              </div>
+              <div class="card mb-2 p-3 py-2 text-dark">
+                <div>
+                  <h5>More from <a class="text-decoration-none" href="#">The DEV Team</a></h5>
+                </div>
+                <div>
+                  <a class="text-decoration-none text-dark" href="#">Congrats to the Coze Bot Challenge</a>
+                  <p>#html<span>#js</span><span>#css</span></p>
+                </div>
+                <div>
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Congrats to the winners of the Frontend Challenge: Earth
+                    Day Edition!</a
+                  >
+                  <p><span>#html</span><span>#js</span><span>#css</span>
+               </p> </div>
+                <div>
+                  <a class="text-decoration-none text-dark"href="#">Are Morning Routines Overrated</a>
+                  <p><span>#html</span><span>#js</span><span>#css</span>
+                </p></div>
+              </div>
+              <div class="card mb-2 p-2">
+                <div>
+                  <button class="btn btn-light">
+                    <img src="../assets/favicon-32x32.png" atl="logo dev" />
+                  </button>
+                  <a class="text-decoration-none text-dark m-2" href="#">The DEV Team</a>
+                </div>
+                <a class="m-2" href="#"
+                  >Maximize Performance with 3 Easy Steps to Eliminate Duplincates in a Javascript Array &#129300;</a
+                >
+                <img class="m-2"
+                  src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Far9u75uk4l92j633qi08.png"
+                  alt="imagen de codigo"
+                  width="300"
+                  height="auto"
+              
+                />
+                <p class="m-2">
+                  Struggling to remove duplicates from an array in Javascript?
+                  Look no further. Here are three easy ways to do it: use the
+                  Set(), indexOf(), and filter() methods, or modify the function
+                  to get duplicates. Make your life easier and get rid of those
+                  pesky duplicates today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/modules/detailsPost.js" type="module"></script>
+  </body>
+</html>

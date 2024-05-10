@@ -92,6 +92,17 @@ body {
   justify-content: center;
 }
 
+.boton {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.boton:hover {
+  color: #3063f1d8;
+}
+
 @media (max-width: 776px) {
   .right-aside,
   .left-aside,
@@ -117,3 +128,6 @@ body {
 @import 'redes';
 @import 'other';
 @import 'form';
+@import 'detailPost';
+@import 'login';
+@import 'createAccount';
