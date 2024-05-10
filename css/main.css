@@ -838,6 +838,24 @@ div a:hover {
   color: blue;
 }
 
+.logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logos img {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-items.hide-non-hidden.login-links {
+  display: none;
+}
+
+.nav-items.show-hidden.hidden-links {
+  display: block;
+}
+
 .col-12 {
   border: none;
 }
